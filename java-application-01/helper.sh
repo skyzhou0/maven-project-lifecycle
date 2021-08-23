@@ -32,8 +32,15 @@ mvn clean compile
 # import org.apache.commons.lang3.StringUtils;
 
 # add the following to POM.xml.
-<dependency>
+<dependencies>
+	<dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-lang3</artifactId>
     <version>3.12.0</version>
-</dependency>
+	</dependency>
+</dependencies>	
+
+# Rebuild, will now be successful.
+
+# 7. Look at the Dependecies tree.
+mvn dependency:tree
