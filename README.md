@@ -23,3 +23,19 @@ For Web Application locations, Mave will look into "project root" -> "src" -> "m
 mkdir -p src/main/webapp
 
 ```
+
+## Dependencies
+Maven uses POM to resolve dependcies. It looks at Maven Central, Other Repositories. Note that it will look at Local Repo first. 
+
+They are 6 dependencies scopes:
+- Compile
+	- Complilation and execution.
+	- Added to Dependency Project.
+	- Included in containers (war/ear)
+- Runtime
+	- Deployment/Runtime
+- Test
+- Provided
+	- Provided by Target in Web Application and Application Server.
+- System
+- Import 

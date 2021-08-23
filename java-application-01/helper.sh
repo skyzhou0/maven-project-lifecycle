@@ -23,3 +23,17 @@ ls ~/.m2/repository/
 
 # 5 Commit and update
 git commit -am "using maven plugin."
+
+
+# 6. Addition Dependencies. In the application, we would like to use the StringUtils.
+# so we import in in the Application.java. However, we need to add such dependency to the POM.xml.
+# without, the following command will fail.
+mvn clean compile
+# import org.apache.commons.lang3.StringUtils;
+
+# add the following to POM.xml.
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.12.0</version>
+</dependency>
